@@ -1,11 +1,12 @@
 Stock_Price_Forecasting
 ==============================
-This is the major project for machine learning internship at leapfrog technology. Here This project is based on time series analysis and forcast the price of selected stock script.
+This is the major project for machine learning internship at leapfrog technology. Here this project is based on time series analysis and all about forcasting the price of selected stock script.
 
 ### Project Structure
 ```
 ├── LICENSE
 ├── README.md          <- The top-level README for this project
+├── api                <- calls and act as a endpoint faciliating for project functions.
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
