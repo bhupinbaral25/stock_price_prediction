@@ -17,7 +17,7 @@ This is the major project for machine learning internship at leapfrog technology
 │   ├── processed      <- The final, processed data sets for modeling
 │   └── raw            <- The original, immutable data dump
 │
-├── deploy             <- Stores any files, configurations related to deploying your model (Dockerfile, etc.)
+├── deploy             <- Stores any files, configurations related to deploying your model (Dockerfile)
 │ 
 ├── model_checkpoints  <- Trained and serialized models, model predictions, model summaries, config files
 │
