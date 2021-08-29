@@ -1,37 +1,41 @@
 import pandas as pd
+import os
 
-def read_dataset(path : str, file_type : str):
-    '''
-    input path as string, file_type = csv or xlsx
+
+def read_dataset(path: str) -> pd.DataFrame:
+
+    """
+    input path as string
     -----------------------------------------------
     Read data from path with their respective file
-    type and convet the data and time type and drop 
-    SN 
+    type and convet the data and time type and drop
+    SN
     -----------------------------------------------
     Return the dataframe with index data and time
-    '''
-    if file_type == 'csv':
-       dataframe = pd.read_csv(path)
+    """
+    name, extension = os.path.splitext(path)
+    if extension == ".csv":
+        dataframe = pd.read_csv(path)
 
-    elif file_type == 'xlsx':
+    elif extension == ".xlsx":
         dataframe = pd.read_excel(path)
-    
-    dataframe['Datetime'] = pd.to_datetime(dataframe['Date']).set_index('Datetime')
-    dataframe.drop(['S.N.', 'Date'], axis = 1, inplace = True)
+
+    dataframe["Datetime"] = pd.to_datetime(dataframe["Date"]).set_index("Datetime")
+    dataframe.drop(["Date"], axis = 1, inplace = True)
 
     return dataframe
 
-def preprocess_data(dataset):
-    '''
-    '''
-    dataset.where(dataset.values == 0, 
-                other = (dataset.fillna(method = 'ffill') + 
-                dataset.fillna(method = 'bfill'))/2)
 
-    return dataset.sort_index()
+def join_dataframe(dataframe_1: pd.DataFrame, dataframe_2: pd.DataFrame) -> pd.DataFrame:
+    """ """
+    return dataframe_1.join(dataframe_2).sort_index()
 
 
+def preprocess_data(dataframe: pd.DataFrame) -> pd.DataFrame:
+    """ """
+    dataframe.where(
+        dataframe.values == 0,
+        other = (dataframe.fillna(method="ffill") + dataframe.fillna(method="bfill")) / 2,
+    )
 
-
-
-
+    return dataframe.sort_index()
