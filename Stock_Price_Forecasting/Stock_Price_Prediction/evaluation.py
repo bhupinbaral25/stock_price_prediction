@@ -10,10 +10,10 @@ def inverse_scalar(dataframe: np.ndarray) -> np.ndarray:
     return scaler.inverse_transform(dataframe)
 
 
-def inverse_scaling(model, n_lag, X_test, Y_test):
-    """ """
+def inverse_scaling(model, n_lag: int, X_test:np.ndarray, Y_test:np.ndarray)-> np.ndarray:
+    """This functions inverse the scaling of model output and lable value """
     y_predict = model.predict(X_test)
-    test_X = X_test.reshape((X_test.shape[0], n_lag * X_test.shape(2)))
+    test_X = np.array(X_test.reshape((X_test.shape[0], n_lag * X_test.shape(2))))
     inverse_ypredict = inverse_scalar(
         np.concatenate((y_predict, test_X[:, -(X_test.shape(2) - 1) :]), axis=1)
     )[:, 0]
@@ -27,13 +27,14 @@ def inverse_scaling(model, n_lag, X_test, Y_test):
     return inverse_ypredict, inverse_ytrue
 
 
-def evaluateModel(y_actual: np.ndarray, y_predicted: np.ndarray) -> dict:
-    """ """
+def evaluate_model(model, n_lag: int, X_test:np.ndarray, Y_test:np.ndarray) -> float:
+    """ This functions returns the value of different evaluation metrics"""
+    predicted, actual = inverse_scaling(model, n_lag, X_test, Y_test)
+    rmse = np.sqrt(mean_squared_error(actual, predicted))
+    mae = mean_absolute_error(actual, predicted)
+    r2 = r2_score(actual, predicted)
 
-    result_dict = {
-        "Test RMSE:": math.sqrt(mean_squared_error(y_actual, y_predicted)),
-        "R2_Score: ": r2_score(y_actual, y_predicted),
-        "MAE:": mean_absolute_error(y_actual, y_predicted),
-    }
+    return rmse, mae, r2
 
-    return result_dict
+
+   
