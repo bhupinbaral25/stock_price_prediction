@@ -1,0 +1,14 @@
+
+n_lag = 12
+  
+hyper_parameters  = {
+      'X_train': X_train,
+      'Y_train': Y_train,
+      'epochs': 100,
+      'batch_size' : 64,
+      'validation_data' : (X_validation, Y_validation),
+      'verbose' : 1,
+      'shuffle': False,
+      'units' : 50
+    }
+
