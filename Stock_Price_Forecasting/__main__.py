@@ -16,7 +16,7 @@ if __name__ == '__main__':
     dataframe = rd.preprocess_data(rd.read_dataset(path))
 
     '''Spliting the dataset and reshape them into the compatible input for model'''
-    scale_dataset(dataframe, inverse = False)
+    
     X_train, X_validation, X_test, Y_train, Y_validation, Y_test = split_dataset(
     dataframe, n_lag = n_lag)
     

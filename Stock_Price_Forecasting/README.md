@@ -1,6 +1,7 @@
 Stock_Price_Forecasting
 ==============================
 This is the major project for machine learning internship at leapfrog technology. Here this project is based on time series analysis and all about forcasting the price of selected stock script.
+This project is delevelop for beginner investors and traders in Nepali Share market. The aim of this project is to forecast the stock market. This project is just for educational purposes for beginners. Share market cannot be predicted accurately. Here I tried to develop an optimised machine learning model to predict the stock market.
 
 ### Project Structure
 ```
@@ -42,4 +43,9 @@ This is the major project for machine learning internship at leapfrog technology
 │   │
 │   ├── train.py       <- Script to run model training
 │   └── eval.py        <- Script to run trained model evaluation 
+|
+├────── __main__.py    <- Scipts of all main part of  the projects
+├────── model.yaml     <- config file for hyperparameter tunning for the model
 ```
+
+
