@@ -1,0 +1,15 @@
+artifact_uri: file:///media/bhupin/SSD%28C%29/final_project/stock_prediction/Stock_Price_Forecasting/mlruns/0/8e6cbd1bb64f498990cb77cb86862f94/artifacts
+end_time: 1630354068056
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 8e6cbd1bb64f498990cb77cb86862f94
+run_uuid: 8e6cbd1bb64f498990cb77cb86862f94
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1630353973893
+status: 4
+tags: []
+user_id: bhupin

@@ -1,1 +1,11 @@
 notebooks/.ipynb_checkpoints
+
+Stock_Price_prediction/__pycache__
+Stock_Price_prediction/src/__pycache__
+Scripts/__pycache__
+
+__pycache__
+mlruns/.trash
+
+notebooks/Findings.ipynb
+.ipynb_checkpoints

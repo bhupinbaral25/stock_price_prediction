@@ -19,7 +19,7 @@ This is the major project for machine learning internship at leapfrog technology
 │
 ├── deploy             <- Stores any files, configurations related to deploying your model (Dockerfile)
 │ 
-├── model_checkpoints  <- Trained and serialized models, model predictions, model summaries, config files
+├── mlruns             <- Trained and serialized models, model predictions, model summaries
 │
 ├── notebooks          <- Jupyter notebooks for doing exploratory data analysis, analyzing model outputs, etc.
 │
