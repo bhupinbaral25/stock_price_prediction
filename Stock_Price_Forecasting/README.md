@@ -3,6 +3,27 @@ Stock_Price_Forecasting
 This is the major project for machine learning internship at leapfrog technology. Here this project is based on time series analysis and all about forcasting the price of selected stock script.
 This project is delevelop for beginner investors and traders in Nepali Share market. The aim of this project is to forecast the stock market. This project is just for educational purposes for beginners. Share market cannot be predicted accurately. Here I tried to develop an optimised machine learning model to predict the stock market.
 
+## start the project
+
+```bash
+pip install virtualenv
+```
+Then setup your virtual environment with env_name
+
+```bash
+virtualenv env_name
+```
+Then activate the virtual environment
+
+```bash
+source env_name/bin/activate
+```
+Then install all the dependencies
+
+```bash
+pip install -r requirements.txt
+stramlit run views.py
+```
 ### Project Structure
 ```
 ├── LICENSE
@@ -47,12 +68,8 @@ This project is delevelop for beginner investors and traders in Nepali Share mar
 ├────── __main__.py    <- Scipts of all main part of  the projects
 ├────── model.yaml     <- config file for hyperparameter tunning for the model
 ```
-To start the project
 
-```bash
-pip install -r requirements.txt
-stramlit run views.py
-```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
@@ -61,6 +78,6 @@ Please make sure to update tests as appropriate.
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
-## Autor
+## Author
 Bhupin Baral
 
