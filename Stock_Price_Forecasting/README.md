@@ -1,5 +1,5 @@
-Stock_Price_Forecasting
-==============================
+Stock Price Forecasting
+==========================================================================================
 This is the major project for machine learning internship at leapfrog technology. Here this project is based on time series analysis and all about forcasting the price of selected stock script.
 This project is delevelop for beginner investors and traders in Nepali Share market. The aim of this project is to forecast the stock market. This project is just for educational purposes for beginners. Share market cannot be predicted accurately. Here I tried to develop an optimised machine learning model to predict the stock market.
 
@@ -8,7 +8,7 @@ This project is delevelop for beginner investors and traders in Nepali Share mar
 ```bash
 pip install virtualenv
 ```
-Then setup your virtual environment with env_name
+Then setup your virtual environment with env_name like myenv
 
 ```bash
 virtualenv env_name
